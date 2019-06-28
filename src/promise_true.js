@@ -3,3 +3,5 @@ function promise_true() {
     resolve(true);
   });
 }
+
+module.exports = { promise_true };

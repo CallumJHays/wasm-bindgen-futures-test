@@ -1,17 +1,6 @@
 use wasm_bindgen::prelude::*;
-
-use wasm_bindgen_futures::JsFuture;
 use js_sys::Promise;
-use futures::Future;
-
-// When the `wee_alloc` feature is enabled, this uses `wee_alloc` as the global
-// allocator.
-//
-// If you don't want to use `wee_alloc`, you can safely delete this.
-// #[cfg(feature = "wee_alloc")]
-// #[global_allocator]
-// static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
-
+use wasm_bindgen_futures::JsFuture;
 
 // This is like the `main` function, except for JavaScript.
 #[wasm_bindgen(start)]
@@ -23,16 +12,12 @@ pub fn main_js() -> Result<(), JsValue> {
 
 
     // Your code goes here!
-    assert!(
-        JsFuture::from(promise_true())
-            .wait()?
-            .as_bool().unwrap()
-    );
+    JsFuture::from(promise_true());
 
     Ok(())
 }
 
-#[wasm_bindgen(module="/src/promise_true.js")]
+#[wasm_bindgen(module = "/src/promise_true.js")]
 extern "C" {
     fn promise_true() -> Promise;
 }
