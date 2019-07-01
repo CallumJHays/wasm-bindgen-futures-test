@@ -13,7 +13,7 @@ rimraf dist pkg && webpack-dev-server --open -d # run
 
 # The Code
 
-[src/lib.rs](https://github.com/CallumJHays/wasm-bindgen-futures-test/src/lib.rs):
+[src/lib.rs](https://github.com/CallumJHays/wasm-bindgen-futures-test/blob/master/src/lib.rs):
 
 ```rust
 use wasm_bindgen::prelude::*;
@@ -41,7 +41,7 @@ extern "C" {
 }
 ```
 
-[src/promise_true.js](https://github.com/CallumJHays/wasm-bindgen-futures-test/src/promise_true.js):
+[src/promise_true.js](https://github.com/CallumJHays/wasm-bindgen-futures-test/blob/master/src/promise_true.js):
 
 ```javascript
 export const promise_true = async () => {
