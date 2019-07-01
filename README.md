@@ -13,7 +13,7 @@ rimraf dist pkg && webpack-dev-server --open -d # run
 
 # The Code
 
-[src/lib.rs](./src/lib.rs):
+[src/lib.rs](https://github.com/CallumJHays/wasm-bindgen-futures-test/src/lib.rs):
 
 ```rust
 use wasm_bindgen::prelude::*;
@@ -41,7 +41,7 @@ extern "C" {
 }
 ```
 
-[src/promise_true.js](./src/lib.rs):
+[src/promise_true.js](https://github.com/CallumJHays/wasm-bindgen-futures-test/src/promise_true.js):
 
 ```javascript
 export const promise_true = async () => {
@@ -56,6 +56,6 @@ It all compiles fine.
 
 This is the runtime error I experience:
 
-<image src="./wasm_bindgen_future_bugreport.png">
+<img src="https://raw.githubusercontent.com/CallumJHays/wasm-bindgen-futures-test/master/wasm_bindgen_future_bugreport.png" />
 
 Help? 🐱
